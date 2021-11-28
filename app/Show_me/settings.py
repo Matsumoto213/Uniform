@@ -23,7 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # 環境変数からDEBUGを取得。デフォルトはTrue（本番環境モード）
-DEBUG = int(os.environ.get('DEBUG', default=0))
+# DEBUG = int(os.environ.get('DEBUG', default=0))
+DEBUG = True
 
 # 許可するホストを記載
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
@@ -38,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'uniform_api',
+    'app',
 ]
 
 MIDDLEWARE = [
